@@ -151,3 +151,258 @@ h2 {
   .header-inicio { flex-direction: column; gap: 2.5rem; }
   .grid-trabajos { grid-template-columns: 1fr; }
 }
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #EBDFCE;
+    color: #853005;
+    font-family: "Century Gothic", sans-serif;
+}
+
+/* ==============================
+   BARRA DE NAVEGACIÓN
+============================== */
+.menu {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 18px;
+    z-index: 10;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 32px;
+    border: 1.5px solid #853005;
+    border-radius: 50px;
+    color: #853005;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #853005;
+    color: #EBDFCE;
+    transform: translateY(-4px);
+}
+
+/* ==============================
+   ESTRUCTURA DEL PROYECTO (DISE)
+============================== */
+.dise-container {
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 140px 7vw 60px;
+}
+
+.dise-top-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 50px;
+    align-items: start;
+}
+
+.dise-main-info h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0c1a30;
+}
+
+.dise-main-info p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.dise-divider {
+    height: 4px;
+    width: 35px;
+    margin: 15px 0 20px 0;
+}
+.dise-divider.orange { background-color: #e67e22; }
+.dise-divider.blue { background-color: #4a6fa5; }
+
+/* Grid de tarjetas */
+.dise-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.dise-card {
+    background-color: #f1ebd8;
+    padding: 24px 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 135px;
+    /* Propiedad para una animación suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse por encima */
+.dise-card:hover {
+    transform: translateY(-8px); /* Eleva la tarjeta 8px */
+    box-shadow: 0 12px 24px rgba(133, 48, 5, 0.15); /* Crea una sombra suave con el tono de tu paleta */
+}
+
+
+.dise-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1.35;
+}
+
+.dise-category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.dise-square {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+}
+.dise-square.blue { background-color: #11223f; }
+.dise-square.blue-light { background-color: #3b82f6; }
+
+/* Botones dentro del trabajo */
+.dise-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.dise-btn-orange {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+.dise-btn-orange:hover {
+    background-color: #d35400;
+}
+
+/* Sección Inferior */
+.dise-bottom-section {
+    background-color: #e5deb3;
+    padding: 30px 50px;
+    border-radius: 4px;
+}
+
+.dise-talleres-card {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    background-color: #11223f;
+    border-radius: 4px;
+    overflow: hidden;
+    min-height: 420px;
+}
+
+.dise-talleres-content {
+    padding: 40px;
+    color: #ffffff;
+}
+
+.dise-talleres-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.dise-talleres-content p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #d1d5db;
+    margin-bottom: 28px;
+}
+
+.text-light {
+    color: #9ca3af;
+}
+
+.dise-talleres-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==============================
+   FOOTER Y RESPONSIVE
+============================== */
+.footer {
+    width: 100%;
+    padding: 40px 7vw;
+    display: flex;
+    justify-content: center;
+}
+
+.footer a {
+    color: #853005;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #853005;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    opacity: 0.6;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 850px) {
+    .menu {
+        top: 20px;
+        gap: 7px;
+    }
+
+    .menu a {
+        padding: 10px 13px;
+        font-size: 11px;
+    }
+
+    .dise-top-section,
+    .dise-cards-grid,
+    .dise-talleres-card {
+        grid-template-columns: 1fr;
+    }
+
+    .dise-bottom-section {
+        padding: 15px;
+    }
+
+    .dise-talleres-image {
+        max-height: 280px;
+    }
+}
